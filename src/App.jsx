@@ -4,10 +4,11 @@ import axios from 'axios'
 
 function App() {
   const [pokemonName, setPokemonName] = useState("")
+  const [pokemon, setPokemon] = useState({})
 
   const searchPokemon = () => {
     axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`).then((response) => {
-      console.log(response)
+      setPokemon({name: pokemonName, species: response.data.species.name, img: response.data.sprites.front_default, hp: response.data.stats[0].base_stat})
     })
   }
 
