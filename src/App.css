@@ -31,9 +31,16 @@ padding-left: 10px;
 
 .TitleSection button {
 width: 200px;
-height: 40px;
+height: 60px;
+margin: 20px;
 border-radius: 10px;
 font-size: 18px;
 padding-left: 10px;
-background-color: #4ca8ee;
+border: none;
+color: white;
+background-color: #006cbf;
+}
+
+.TitleSection button:hover {
+  cursor: pointer;
 }
